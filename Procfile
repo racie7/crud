@@ -1,1 +1,1 @@
-web: gunicorn interview_crud.wsgi --log-file -
+web: gunicorn main.wsgi --log-file -
