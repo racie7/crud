@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Student List</title>
+{% endblock title %}
+
+{% block content %}
+    <h1 style="text-align: center; padding-top: 1em; padding-bottom: 1em; color: white;"><b>
+        Student Information Management System
+    </b></h1>
+
+    <!-- Search section  -->
+    <div class="center-form" style="display: flex; justify-content: center;">
+        <form action="{% url 'students-list' %}" method="GET" style="width: 500px;">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search by student name, course, or id number" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
+              name="search_query" value="{{ search_query }}"/>
+    
+              <input class="btn btn-primary" type="submit" value="Search"/>
+            </div>
+        </form>
+    </div>
+    <br>
+    
+    <table class="table table-striped">
+        <thead style="color: white;">
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone No</th>
+                <th scope="col">Course</th>
+                <th scope="col">ID Number</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody style="background-color: aliceblue;">
+            {% for stud in students %}
+                <tr>
+                    <th scope="row">
+                        <img style="height: 100px; width: auto;" src="{{ stud.imageURL }}" class="card-img-top" alt="...">
+                    </th>
+                    <th scope="row">{{ stud.stud_name }}</th>
+                    <td>{{ stud.stud_email }}</td>
+                    <td>{{ stud.stud_contact }}</td>
+                    <td>{{ stud.stud_course }}</td>
+                    <td>{{ stud.stud_stud_id }}</td>
+                    <td>
+                        <a style="margin-right: 30px;" href="{% url 'edit-student' stud.id %}">Edit</a>
+                        <a href="{% url 'delete-student' stud.id %}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center">
+        <a href="{% url 'create-student' %}"><button type="button" class="btn btn-primary">Add New Student</button></a>
+    </div>
+{% endblock content %}
