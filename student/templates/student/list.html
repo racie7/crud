@@ -14,7 +14,7 @@
     <div class="center-form" style="display: flex; justify-content: center;">
         <form action="{% url 'students-list' %}" method="GET" style="width: 500px;">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Search by student id number, name, course" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
+              <input type="text" class="form-control" placeholder="Search by name or id no" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
               name="search_query" value="{{ search_query }}"/>
     
               <input class="btn btn-primary" type="submit" value="Search"/>
