@@ -34,6 +34,6 @@ $ python manage.py createsuperuser (enter username, email, password)
 <p>>> To access the Admin Site go to url 127.0.0.1:8000/admin</p>
 
 ## To deploy on Heroku
-Follow the guide below on how to deploy the app on Heroku
+Follow this guide on how to deploy the app on Heroku
 [Link to developer.mozilla.](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
 
