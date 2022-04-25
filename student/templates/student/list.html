@@ -14,7 +14,7 @@
     <div class="center-form" style="display: flex; justify-content: center;">
         <form action="{% url 'students-list' %}" method="GET" style="width: 500px;">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Search by student name, course, or id number" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
+              <input type="text" class="form-control" placeholder="Search by student id number, name, course" aria-label="" aria-describedby="basic-addon1" style="margin-right: 10px;"
               name="search_query" value="{{ search_query }}"/>
     
               <input class="btn btn-primary" type="submit" value="Search"/>
@@ -26,13 +26,13 @@
     <table class="table table-striped">
         <thead style="color: black;">
             <tr>
-                <th scope="col">Image</th>
+                <th scope="col">Photo</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Phone No</th>
                 <th scope="col">Course</th>
                 <th scope="col">ID Number</th>
-                <th scope="col">Action</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody style="background-color: aliceblue;">
@@ -47,15 +47,15 @@
                     <td>{{ stud.stud_course }}</td>
                     <td>{{ stud.stud_stud_id }}</td>
                     <td>
-                        <a style="margin-right: 30px;" href="{% url 'edit-student' stud.id %}">Edit</a>
-                        <a href="{% url 'delete-student' stud.id %}">Delete</a>
+                        <a style="margin-right: 30px;" href="{% url 'edit-student' stud.id %}"><button type="button" class="btn btn-primary">Edit</button></a>
+                        <a href="{% url 'delete-student' stud.id %}"><button type="button" class="btn btn-danger">Delete</button></a>
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
-
+</br>
     <div class="text-center">
         <a href="{% url 'create-student' %}"><button type="button" class="btn btn-primary">Add New Student</button></a>
     </div>
