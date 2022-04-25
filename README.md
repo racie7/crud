@@ -1,10 +1,10 @@
-# crudapp
-Django application to perform CRUD operations
+# crud application
+Django application for CRUD operations using postgres as backend
 
-## Run It
+## To clone the project from github
 * Clone the project:
 ```
-$ git clone 
+$ git clone https://github.com/racie7/crud.git
 ```
 
 * Install required packages:
@@ -12,11 +12,11 @@ $ git clone
 $ pip install -r requirements.txt
 ```
 
-* Run server:
+* To Run local development  server:
 ```
 $ python manage.py runserver
 ```
-<p>>> The application should be running at development server 127.0.0.1:8000</p>
+<p>>> The application will run on development server 127.0.0.1:8000</p>
 
 * Make migrations to database:
 ```
@@ -24,7 +24,13 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-* Get admin access:
+* Create an admin user to access the Django Admin Site:
 ```
 $ python manage.py createsuperuser (enter username, email, password)
 ```
+<p>>> To access the Admin Site go to url 127.0.0.1:8000/admin</p>
+
+## To deploy on Heroku
+Follow the guide below on how to deploy the app on Heroku
+[Link to developer.mozilla.](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
+
