@@ -17,9 +17,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('stud_name', models.CharField(max_length=200)),
                 ('stud_email', models.EmailField(max_length=254)),
-                ('stud_contact', models.CharField(max_length=20)),
-                ('stud_role', models.CharField(max_length=200)),
-                ('stud_salary', models.IntegerField()),
+                ('stud_contact', models.CharField(max_length=12)),
+                ('stud_course', models.CharField(max_length=200)),
+                ('stud_stud_id', models.IntegerField()),
                 ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
             ],
         ),
