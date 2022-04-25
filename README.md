@@ -7,8 +7,9 @@ Django application for CRUD operations using postgres as backend
 $ git clone https://github.com/racie7/crud.git
 ```
 * Switch to master branch
+```
 $ git switch master
-
+```
 * Install required packages:
 ```
 $ pip install -r requirements.txt
