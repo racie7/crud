@@ -33,7 +33,8 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://djgitbu-test.herokuapp.com'
+    'https://djgitbu-test.herokuapp.com',
+    'https://studentsy200.herokuapp.com',
 ]
 
 
